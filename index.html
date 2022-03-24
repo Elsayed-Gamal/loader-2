@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loader</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .loader {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .rows {
+        width: 105px;
+      }
+      .row {
+        display: flex;
+        gap: 3px;
+      }
+
+      .row:not(:last-child) {
+        margin-bottom: 3px;
+      }
+      .point {
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        box-shadow: 0px 1px 0.8px 1px rgba(0, 0, 0, 0.33);
+        animation: loader infinite alternate;
+      }
+      .row-1 .point {
+        animation-duration: 0.3s;
+        animation-delay: 0s;
+      }
+      .row-2 .point {
+        animation-duration: 0.3s;
+        animation-delay: 0.1s;
+      }
+      .row-3 .point {
+        animation-duration: 0.3s;
+        animation-delay: 0.2s;
+      }
+      .row-4 .point {
+        animation-duration: 0.3s;
+        animation-delay: 0.3s;
+      }
+      .red {
+        background-color: #a92427;
+      }
+      .green {
+        background-color: #43813d;
+      }
+      @keyframes loader {
+        from {
+          width: 13px;
+          height: 13px;
+        }
+        to {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="loader">
+        <div class="rows">
+          <div class="row row-1">
+            <div class="point green"></div>
+            <div class="point green"></div>
+            <div class="point green"></div>
+            <div class="point green"></div>
+            <div class="point green"></div>
+            <div class="point green"></div>
+          </div>
+          <div class="row row-2">
+            <div class="point red"></div>
+            <div class="point red"></div>
+            <div class="point red"></div>
+            <div class="point red"></div>
+          </div>
+          <div class="row row-3">
+            <div class="point green"></div>
+            <div class="point green"></div>
+            <div class="point green"></div>
+            <div class="point green"></div>
+            <div class="point green"></div>
+          </div>
+          <div class="row row-4">
+            <div class="point red"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
